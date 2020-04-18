@@ -7,13 +7,11 @@ const Image = styled.img`
   border-radius: 50%;
   box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.5);
 `;
+
 const Header = styled.h1`
   text-align: center;
   width: 100%;
-`;
-
-const HeaderBackground = styled.div`
-  background: slategray;
+  font-size: 1.4rem;
 `;
 
 const Wrapper = styled.div`
@@ -22,6 +20,18 @@ const Wrapper = styled.div`
   margin: 2% auto;
   border-radius: 5px;
   box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.5);
+
+  @keyframes animation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  animation-duration: 1s;
+  animation-name: animation;
+  
 `;
 
 const Para = styled.p`
@@ -29,6 +39,7 @@ const Para = styled.p`
   border-top: 1px solid gray;
   margin: 3% auto;
   width: 80%;
+  padding-top: 2%;
 `;
 
 const Character = (props) => {
